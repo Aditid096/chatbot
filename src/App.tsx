@@ -8,6 +8,7 @@ import { Bot, Settings, X, Maximize2, Minimize2 } from 'lucide-react';
 import { findBestMatch } from './utils/intent-matcher';
 import { cn } from './utils/cn';
 import { initialIntents } from './data/intents';
+import logo from "./assets/logo.png"
 
 function App() {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -103,13 +104,8 @@ function App() {
         <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-4 text-white flex-shrink-0">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-xl overflow-hidden bg-white/10 p-1.5 ring-2 ring-white/20">
-                {/* Placeholder for the actual logo */}
-                <img 
-                  src="src\assets\logo.png" 
-                  alt="Logo" 
-                  className="w-full h-full object-cover rounded-lg"
-                />
+            <div className="w-12 h-12 rounded-xl overflow-hidden bg-white/10 p-1.5 ring-2 ring-white/20">
+            <img src={logo} alt="Logo" className="w-full h-full object-cover rounded-lg" />;
               </div>
               <div>
                 <div className="flex items-center gap-1.5">
